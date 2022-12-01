@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: hsl(217, 54%, 11%);
+}
+
+p {
+  font-size: 18px;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card-desc,
+.card-img,
+.card-val-date,
+.card-foot {
+  margin: 1.3rem;
+}
+
+.card {
+  width: 330px;
+  min-height: 530px;
+  border-radius: 10px;
+  background: hsl(216, 50%, 16%);
+}
+
+.card-img-box {
+  position: relative;
+  isolation: isolate;
+}
+
+.card-img:hover::after {
+  content: "";
+  position: absolute;
+  margin: 0 1.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  inset: 0;
+  z-index: 1;
+  opacity: 1;
+
+  background: no-repeat url(./images/icon-view.svg) hsla(178, 100%, 50%, 0.5);
+  background-position: center;
+}
+
+.card-img {
+  border-radius: 10px;
+  background: no-repeat url(./images/image-equilibrium.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 260px;
+}
+
+h3,
+.author {
+  color: #fff;
+}
+
+.desc {
+  color: hsl(215, 51%, 70%);
+  padding: 1rem 0;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.card-val-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.val {
+  color: hsl(178, 100%, 50%);
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.date {
+  margin-left: 5px;
+}
+
+.val-bg {
+  background: no-repeat url(./images/icon-ethereum.svg);
+  background-position: center;
+  width: 12px;
+}
+
+.date-bg {
+  background: no-repeat url(./images/icon-clock.svg);
+  background-position: center;
+  margin-left: auto;
+  width: 18px;
+}
+
+.date,
+.statement {
+  color: hsl(215, 51%, 70%);
+  font-size: 16px;
+}
+
+.card-foot {
+  padding: 1.5rem 0 0.5rem;
+  border-top: hsl(215, 32%, 27%) 0.5px solid;
+}
+
+.foot-desc {
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  padding: 0 5px;
+}
+
+.statement {
+  margin-left: 15px;
+}
+
+.author,
+.statement {
+  font-size: 15px;
+}
+
+.bg {
+  padding: 0;
+  background: no-repeat url(./images/image-avatar.png);
+  background-size: 30px;
+  border: #fff solid 1px;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+
+h3:hover,
+.author:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
